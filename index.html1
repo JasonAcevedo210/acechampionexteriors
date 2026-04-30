@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ace Champion Exteriors</title>
+
+<style>
+body {margin:0;font-family:Arial;background:#f5f3ec;}
+header {
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 8%;background:#fff;
+}
+.logo {height:70px;}
+.hero {
+  padding:100px 8%;
+  background:#174f2c;color:white;
+}
+.btn {
+  background:white;color:#174f2c;
+  padding:15px 25px;font-weight:bold;
+  display:inline-block;margin-top:20px;
+}
+.contact {
+  padding:80px 8%;
+  background:#07160e;color:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <!-- 🔥 YOUR LOGO -->
+  <img src="https://i.imgur.com/7Q1Z7Qf.png" class="logo">
+
+  <div>
+    <a href="#contact" class="btn">Get Estimate</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Reliable Exterior Cleaning</h1>
+  <p>Veteran-owned exterior cleaning in Jacksonville, FL</p>
+  <a href="#contact" class="btn">Call 904-735-0757</a>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>📞 904-735-0757</p>
+  <p>📧 jason@acechampionexteriors.com</p>
+</section>
+
+</body>
+</html>
