@@ -1,29 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ace Champion Exteriors</title>
 
 <style>
-body {margin:0;font-family:Arial;background:#f5f3ec;}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 header {
-  display:flex;justify-content:space-between;align-items:center;
-  padding:20px 8%;background:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: white;
 }
-.logo {height:70px;}
+
+.logo {
+    height: 60px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #1b3d2f;
+    font-weight: bold;
+}
+
 .hero {
-  padding:100px 8%;
-  background:#174f2c;color:white;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    background-size: cover;
+    color: white;
+    padding: 120px 8%;
 }
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 600px;
+}
+
 .btn {
-  background:white;color:#174f2c;
-  padding:15px 25px;font-weight:bold;
-  display:inline-block;margin-top:20px;
+    background: white;
+    color: #174f2c;
+    padding: 15px 25px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
 }
+
+.services {
+    padding: 60px 8%;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
 .contact {
-  padding:80px 8%;
-  background:#07160e;color:white;
+    background: #0e2d1f;
+    color: white;
+    padding: 60px 8%;
 }
 </style>
 </head>
@@ -31,24 +84,36 @@ header {
 <body>
 
 <header>
-  <!-- 🔥 YOUR LOGO -->
-  <img src="https://i.imgur.com/7Q1Z7Qf.png" class="logo">
-
-  <div>
-    <a href="#contact" class="btn">Get Estimate</a>
-  </div>
+    <img src="logo.png" class="logo">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
 
 <section class="hero">
-  <h1>Reliable Exterior Cleaning</h1>
-  <p>Veteran-owned exterior cleaning in Jacksonville, FL</p>
-  <a href="#contact" class="btn">Call 904-735-0757</a>
+    <h1>Reliable Exterior Services You Can Count On</h1>
+    <p>Serving Jacksonville, FL – Pressure Washing, Soft Washing, and More</p>
+    <a href="#" class="btn">Get a Free Estimate</a>
 </section>
 
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>📞 904-735-0757</p>
-  <p>📧 jason@acechampionexteriors.com</p>
+<section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+        <div class="card">Pressure Washing</div>
+        <div class="card">Soft Washing</div>
+        <div class="card">Window Cleaning</div>
+        <div class="card">Deck Cleaning</div>
+        <div class="card">Paver Cleaning</div>
+        <div class="card">Pool Areas</div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 904-735-0757</p>
+    <p>📧 jason@acechampionexteriors.com</p>
 </section>
 
 </body>
