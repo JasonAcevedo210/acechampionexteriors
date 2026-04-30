@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ace Champion Exteriors</title>
+<title>Ace Champion Exteriors | Jacksonville Exterior Cleaning</title>
 
 <style>
 :root {
@@ -12,6 +12,15 @@
   --cream: #f6f5ef;
   --text: #122016;
   --muted: #5d675f;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,77 +30,169 @@ body {
   color: var(--text);
 }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 
 .topbar {
   background: var(--green);
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 header {
+  background: white;
+  padding: 18px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  background: white;
 }
 
 .logo {
-  height: 70px;
+  height: 82px;
+  width: auto;
+  object-fit: contain;
 }
 
 nav a {
-  margin: 0 12px;
-  font-weight: bold;
+  margin-left: 30px;
   color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .hero {
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-  background-size: cover;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 90px 8%;
   color: white;
-  padding: 120px 8%;
+  background:
+    linear-gradient(rgba(7,22,14,.72), rgba(7,22,14,.72)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 56px;
+  line-height: 1;
+  margin: 0 0 22px;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 28px;
 }
 
 .btn {
+  display: inline-block;
+  padding: 15px 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-light {
   background: white;
   color: var(--green);
-  padding: 14px 22px;
-  display: inline-block;
-  margin-top: 20px;
-  font-weight: bold;
+}
+
+.btn-green {
+  background: var(--green);
+  color: white;
+}
+
+.trust {
+  background: white;
+  padding: 32px 8%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--green);
 }
 
 section {
-  padding: 70px 8%;
+  padding: 80px 8%;
+}
+
+.section-title {
+  max-width: 760px;
+  margin-bottom: 38px;
+}
+
+.section-title span {
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  line-height: 1.05;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.section-title p {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 .service-card {
   background: white;
-  border: 1px solid #ddd;
-  padding: 20px;
+  border: 1px solid #e2e2dc;
+  overflow: hidden;
 }
 
 .service-card img {
   width: 100%;
-  height: 200px;
+  height: 230px;
   object-fit: cover;
-  margin-bottom: 15px;
+  display: block;
+}
+
+.service-content {
+  padding: 26px;
+}
+
+.service-content h3 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.service-content p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
 }
 
 .about {
@@ -99,27 +200,109 @@ section {
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 42px;
+  line-height: 1.05;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.about p,
+.about li {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.about ul {
+  padding-left: 20px;
 }
 
 .contact {
   background: var(--dark);
   color: white;
   display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 40px;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact h2 {
+  font-size: 42px;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.contact p {
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 .contact-card {
   background: white;
-  color: black;
-  padding: 25px;
+  color: var(--text);
+  padding: 34px;
+}
+
+.contact-card a,
+.contact-card p {
+  display: block;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.contact-card .btn {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
 }
 
 footer {
   background: white;
-  padding: 20px;
-  text-align: center;
+  padding: 28px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+}
+
+footer img {
+  height: 58px;
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .trust,
+  .services-grid,
+  .about,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -127,100 +310,141 @@ footer {
 <body>
 
 <div class="topbar">
-Veteran-Owned • Jacksonville, FL • Free Estimates
+  Veteran-Owned • Jacksonville, FL • Free Estimates
 </div>
 
 <header>
-<img src="logo.png" class="logo">
+  <img src="logo.png" class="logo" alt="Ace Champion Exteriors Logo">
 
-<nav>
-<a href="#">Services</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</nav>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-<h1>Reliable Exterior Services You Can Count On</h1>
-<p>Pressure Washing • Soft Washing • Window Cleaning • More</p>
-<a href="#contact" class="btn">Get Free Estimate</a>
+  <div class="hero-content">
+    <div class="eyebrow">Strong Work. Clean Finish.</div>
+    <h1>Exterior Cleaning Services in Jacksonville, FL</h1>
+    <p>
+      Veteran-owned exterior cleaning for homes and commercial properties across the Greater Jacksonville area.
+      Pressure washing, soft washing, window cleaning, deck cleaning, paver cleaning, and more.
+    </p>
+    <a href="#contact" class="btn btn-light">Get a Free Estimate</a>
+  </div>
 </section>
 
-<section>
-<h2>Our Services</h2>
-
-<div class="services-grid">
-
-<div class="service-card">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<h3>Pressure Washing</h3>
-<p>Driveways, sidewalks, patios and more.</p>
+<div class="trust">
+  <div>✓ Free Estimates</div>
+  <div>✓ Veteran-Owned</div>
+  <div>✓ Local & Reliable</div>
+  <div>✓ Satisfaction Guaranteed</div>
 </div>
 
-<div class="service-card">
-<img src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198">
-<h3>Soft Washing</h3>
-<p>Safe cleaning for roofs and siding.</p>
-</div>
+<section id="services">
+  <div class="section-title">
+    <span>Our Services</span>
+    <h2>Clean, professional exterior work</h2>
+    <p>
+      ACE Champion Exteriors helps homeowners and businesses improve curb appeal, protect exterior surfaces,
+      and keep properties looking clean year-round.
+    </p>
+  </div>
 
-<div class="service-card">
-<img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
-<h3>Window Cleaning</h3>
-<p>Streak-free exterior window cleaning.</p>
-</div>
+  <div class="services-grid">
 
-<div class="service-card">
-<img src="https://images.unsplash.com/photo-1597002970539-2f1eae8a5c47">
-<h3>Deck Cleaning</h3>
-<p>Restore decks and outdoor spaces.</p>
-</div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Clean home exterior">
+      <div class="service-content">
+        <h3>Pressure Washing</h3>
+        <p>Driveways, sidewalks, patios, walkways, curbs, and exterior hard surfaces.</p>
+      </div>
+    </div>
 
-<div class="service-card">
-<img src="https://images.unsplash.com/photo-1618220179428-22790b461013">
-<h3>Pool Areas</h3>
-<p>Clean pool decks and patios.</p>
-</div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Clean roof and siding">
+      <div class="service-content">
+        <h3>Soft Washing</h3>
+        <p>Low-pressure cleaning for roofs, siding, soffits, and surfaces that need a safer touch.</p>
+      </div>
+    </div>
 
-<div class="service-card">
-<img src="https://images.unsplash.com/photo-1581579188871-45ea61f2aef8">
-<h3>Paver Cleaning</h3>
-<p>Brick, pavers, and hardscape cleaning.</p>
-</div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Commercial exterior windows">
+      <div class="service-content">
+        <h3>Window Cleaning</h3>
+        <p>Exterior window cleaning for residential and commercial properties.</p>
+      </div>
+    </div>
 
-</div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=900&q=80" alt="Outdoor deck area">
+      <div class="service-content">
+        <h3>Deck Cleaning</h3>
+        <p>Cleaning for decks, patios, and outdoor living areas to restore a cleaner finish.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=900&q=80" alt="Pool deck area">
+      <div class="service-content">
+        <h3>Pool Deck Washing</h3>
+        <p>Pool deck, screened patio, and surrounding concrete cleaning.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Clean paver driveway">
+      <div class="service-content">
+        <h3>Paver Cleaning</h3>
+        <p>Cleaning for pavers, brick walkways, hardscapes, and outdoor surfaces.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section class="about">
-<div>
-<h2>Why Choose ACE</h2>
-</div>
+<section id="about" class="about">
+  <div>
+    <div class="eyebrow">Why Choose ACE</div>
+    <h2>Reliable service built on pride</h2>
+  </div>
 
-<div>
-<p>Veteran-owned exterior cleaning company serving Jacksonville, FL.</p>
-<ul>
-<li>Reliable & professional</li>
-<li>Residential & commercial</li>
-<li>Clean work & attention to detail</li>
-</ul>
-</div>
+  <div>
+    <p>
+      Ace Champion Exteriors is a veteran-owned exterior cleaning company serving the Greater Jacksonville, FL area.
+      We focus on clean work, clear communication, and dependable service from start to finish.
+    </p>
+    <ul>
+      <li>Veteran-owned and locally operated</li>
+      <li>Residential and commercial exterior services</li>
+      <li>Professional, respectful service</li>
+      <li>Free estimates and clear communication</li>
+    </ul>
+  </div>
 </section>
 
-<section class="contact" id="contact">
-<div>
-<h2>Get Your Free Estimate</h2>
-<p>Call or email today.</p>
-</div>
+<section id="contact" class="contact">
+  <div>
+    <div class="eyebrow">Get Your Free Estimate</div>
+    <h2>Ready to clean up your exterior?</h2>
+    <p>
+      Call, text, or email today for exterior cleaning services in the Greater Jacksonville, FL area.
+    </p>
+  </div>
 
-<div class="contact-card">
-<p>📞 904-735-0757</p>
-<p>📧 jason@acechampionexteriors.com</p>
-<a class="btn" href="mailto:jason@acechampionexteriors.com">Request Estimate</a>
-</div>
+  <div class="contact-card">
+    <a href="tel:9047350757">☎ 904.735.0757</a>
+    <a href="mailto:jason@acechampionexteriors.com">✉ jason@acechampionexteriors.com</a>
+    <p>Greater Jacksonville, FL Area</p>
+    <a class="btn btn-green" href="mailto:jason@acechampionexteriors.com?subject=Free Estimate Request">Request Estimate</a>
+  </div>
 </section>
 
 <footer>
-<img src="logo.png" height="50"><br>
-Strong work. Clean finish.
+  <img src="logo.png" alt="Ace Champion Exteriors Logo">
+  <p>Strong work. Clean finish. Veteran-owned and proudly serving Greater Jacksonville, FL.</p>
 </footer>
 
 </body>
