@@ -9,15 +9,12 @@
 :root {
   --green: #174f2c;
   --dark: #07160e;
-  --cream: #f6f5ef;
-  --text: #122016;
+  --cream: #f7f5ef;
+  --text: #101a14;
   --muted: #5d675f;
-  --white: #ffffff;
 }
 
 * { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -58,8 +55,15 @@ nav a {
   font-size: 14px;
 }
 
+.header-btn {
+  background: var(--green);
+  color: white;
+  padding: 14px 22px;
+  font-weight: 700;
+}
+
 .hero {
-  min-height: 620px;
+  min-height: 560px;
   display: flex;
   align-items: center;
   padding: 90px 8%;
@@ -78,8 +82,11 @@ nav a {
   letter-spacing: 3px;
   font-weight: 700;
   font-size: 13px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
+  color: var(--green);
 }
+
+.hero .eyebrow { color: white; }
 
 .hero h1 {
   font-size: 56px;
@@ -125,28 +132,20 @@ nav a {
 section { padding: 80px 8%; }
 
 .section-title {
-  max-width: 760px;
-  margin-bottom: 38px;
-}
-
-.section-title span {
-  color: var(--green);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 700;
-  font-size: 13px;
+  max-width: 820px;
+  margin-bottom: 34px;
 }
 
 .section-title h2 {
-  font-size: 42px;
+  font-size: 38px;
   line-height: 1.05;
-  margin: 10px 0;
+  margin: 8px 0 14px;
   text-transform: uppercase;
 }
 
 .section-title p {
   color: var(--muted);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.6;
 }
 
@@ -160,22 +159,40 @@ section { padding: 80px 8%; }
   background: white;
   border: 1px solid #e2e2dc;
   overflow: hidden;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.05);
 }
 
 .service-card img {
   width: 100%;
-  height: 230px;
+  height: 225px;
   object-fit: cover;
   display: block;
 }
 
 .service-content {
-  padding: 26px;
+  padding: 28px 26px 32px;
+  position: relative;
+}
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: -55px auto 18px;
+  border: 4px solid white;
+  position: relative;
 }
 
 .service-content h3 {
   margin: 0 0 12px;
-  font-size: 24px;
+  font-size: 22px;
   text-transform: uppercase;
 }
 
@@ -193,6 +210,8 @@ section { padding: 80px 8%; }
   gap: 60px;
   align-items: center;
 }
+
+.about .eyebrow { color: white; }
 
 .about h2 {
   font-size: 42px;
@@ -217,6 +236,8 @@ section { padding: 80px 8%; }
   gap: 60px;
   align-items: center;
 }
+
+.contact .eyebrow { color: white; }
 
 .contact h2 {
   font-size: 42px;
@@ -309,6 +330,8 @@ footer img {
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <a href="#contact" class="header-btn">Get Free Estimate</a>
 </header>
 
 <section class="hero">
@@ -332,8 +355,8 @@ footer img {
 
 <section id="services">
   <div class="section-title">
-    <span>Our Services</span>
-    <h2>Clean, professional exterior work</h2>
+    <div class="eyebrow">Our Services</div>
+    <h2>Clean, professional, reliable</h2>
     <p>
       ACE Champion Exteriors helps homeowners and businesses improve curb appeal, protect exterior surfaces,
       and keep properties looking clean year-round.
@@ -345,14 +368,16 @@ footer img {
     <div class="service-card">
       <img src="https://images.unsplash.com/photo-1621452773781-0f992fd1f5cb?auto=format&fit=crop&w=900&q=80" alt="Driveway pressure washing">
       <div class="service-content">
+        <div class="service-icon">↗</div>
         <h3>Pressure Washing</h3>
         <p>Driveways, sidewalks, patios, walkways, curbs, and exterior hard surfaces.</p>
       </div>
     </div>
 
     <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Roof and exterior soft washing">
+      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Roof soft washing">
       <div class="service-content">
+        <div class="service-icon">⌂</div>
         <h3>Soft Washing</h3>
         <p>Low-pressure cleaning for roofs, siding, soffits, and surfaces that need a safer touch.</p>
       </div>
@@ -361,14 +386,16 @@ footer img {
     <div class="service-card">
       <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80" alt="Exterior window cleaning">
       <div class="service-content">
+        <div class="service-icon">▦</div>
         <h3>Window Cleaning</h3>
         <p>Exterior window cleaning for residential and commercial properties.</p>
       </div>
     </div>
 
     <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=900&q=80" alt="Outdoor deck cleaning">
+      <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=900&q=80" alt="Deck cleaning">
       <div class="service-content">
+        <div class="service-icon">≋</div>
         <h3>Deck Cleaning</h3>
         <p>Cleaning for decks, patios, and outdoor living areas to restore a cleaner finish.</p>
       </div>
@@ -377,14 +404,16 @@ footer img {
     <div class="service-card">
       <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=900&q=80" alt="Pool deck washing">
       <div class="service-content">
+        <div class="service-icon">≋</div>
         <h3>Pool Deck Washing</h3>
         <p>Pool deck, screened patio, and surrounding concrete cleaning.</p>
       </div>
     </div>
 
     <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Paver cleaning and hardscape cleaning">
+      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Paver cleaning">
       <div class="service-content">
+        <div class="service-icon">▦</div>
         <h3>Paver Cleaning</h3>
         <p>Cleaning for pavers, brick walkways, hardscapes, and outdoor surfaces.</p>
       </div>
