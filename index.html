@@ -3,329 +3,254 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ace Champion Exteriors | Jacksonville Exterior Cleaning</title>
+<title>Ace Champion Exteriors</title>
 
 <style>
 :root {
-  --green: #174f2c;
-  --dark: #07160e;
-  --cream: #f6f5ef;
-  --text: #122016;
-  --muted: #5d675f;
-  --white: #ffffff;
+  --green:#174f2c;
+  --dark:#07160e;
+  --cream:#f6f5ef;
+  --text:#122016;
+  --muted:#5d675f;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing:border-box; }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--cream);
-  color: var(--text);
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--cream);
+  color:var(--text);
 }
 
-a {
-  text-decoration: none;
-}
-
-.topbar {
-  background: var(--green);
-  color: white;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+a { text-decoration:none; }
 
 header {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 8%;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background:white;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo {
-  height: 75px;
-  object-fit: contain;
+  height:82px;
+  width:auto;
 }
 
 nav a {
-  margin: 0 14px;
-  color: var(--text);
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
+  margin-left:30px;
+  color:var(--text);
+  font-weight:700;
+  font-size:14px;
+  text-transform:uppercase;
 }
 
 .header-btn {
-  background: var(--green);
-  color: white;
-  padding: 14px 22px;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
+  background:var(--green);
+  color:white;
+  padding:16px 26px;
+  font-weight:700;
+  text-transform:uppercase;
 }
 
 .hero {
-  min-height: 650px;
-  display: flex;
-  align-items: center;
-  padding: 90px 8%;
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  padding:90px 8%;
+  color:white;
   background:
-    linear-gradient(rgba(7,22,14,.78), rgba(7,22,14,.78)),
-    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80');
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-
-.hero-content {
-  max-width: 750px;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-weight: 700;
-  font-size: 13px;
-  margin-bottom: 20px;
+    linear-gradient(rgba(7,22,14,.72), rgba(7,22,14,.72)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80");
+  background-size:cover;
+  background-position:center;
 }
 
 .hero h1 {
-  font-size: 58px;
-  line-height: 1;
-  margin: 0 0 24px;
-  text-transform: uppercase;
+  font-size:56px;
+  line-height:1;
+  margin:0 0 22px;
+  text-transform:uppercase;
 }
 
 .hero p {
-  font-size: 19px;
-  line-height: 1.6;
-  margin-bottom: 32px;
-}
-
-.btn-row {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
+  font-size:19px;
+  line-height:1.6;
+  max-width:750px;
 }
 
 .btn {
-  padding: 16px 26px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 14px;
-  display: inline-block;
-}
-
-.btn-light {
-  background: white;
-  color: var(--green);
-}
-
-.btn-outline {
-  border: 1px solid white;
-  color: white;
+  display:inline-block;
+  background:white;
+  color:var(--green);
+  padding:15px 24px;
+  font-weight:700;
+  text-transform:uppercase;
+  margin-top:20px;
 }
 
 .trust {
-  background: white;
-  padding: 35px 8%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  text-align: center;
-}
-
-.trust div {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 13px;
+  background:white;
+  padding:32px 8%;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  text-align:center;
+  color:var(--green);
+  font-weight:700;
 }
 
 section {
-  padding: 80px 8%;
+  padding:80px 8%;
 }
 
 .section-title {
-  max-width: 800px;
-  margin-bottom: 40px;
+  max-width:820px;
+  margin-bottom:34px;
 }
 
 .section-title span {
-  color: var(--green);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 13px;
+  color:var(--green);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:700;
+  font-size:13px;
 }
 
 .section-title h2 {
-  font-size: 44px;
-  line-height: 1.05;
-  margin: 12px 0;
-  text-transform: uppercase;
+  font-size:42px;
+  line-height:1.05;
+  margin:10px 0 14px;
+  text-transform:uppercase;
 }
 
 .section-title p {
-  color: var(--muted);
-  font-size: 18px;
-  line-height: 1.6;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.6;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
 }
 
 .service-card {
-  background: white;
-  padding: 34px;
-  border: 1px solid #e4e4df;
+  background:white;
+  border:1px solid #e2e2dc;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
 }
 
-.service-card h3 {
-  margin-top: 0;
-  font-size: 24px;
-  text-transform: uppercase;
+.service-card img {
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  display:block;
 }
 
-.service-card p {
-  color: var(--muted);
-  line-height: 1.6;
-  font-size: 16px;
+.service-content {
+  padding:28px;
+}
+
+.service-content h3 {
+  margin:0 0 12px;
+  font-size:24px;
+  text-transform:uppercase;
+}
+
+.service-content p {
+  color:var(--muted);
+  line-height:1.6;
+  margin:0;
 }
 
 .about {
-  background: var(--green);
-  color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  background:var(--green);
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
 }
 
 .about h2 {
-  font-size: 44px;
-  line-height: 1.05;
-  text-transform: uppercase;
-  margin-top: 0;
+  font-size:42px;
+  text-transform:uppercase;
+  margin:0;
 }
 
-.about p, .about li {
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-.about ul {
-  padding-left: 20px;
+.about p,
+.about li {
+  font-size:18px;
+  line-height:1.7;
 }
 
 .contact {
-  background: var(--dark);
-  color: white;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 60px;
-  align-items: center;
+  background:var(--dark);
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:60px;
+  align-items:center;
 }
 
 .contact h2 {
-  font-size: 44px;
-  text-transform: uppercase;
-  margin-top: 0;
-}
-
-.contact p {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size:42px;
+  text-transform:uppercase;
+  margin:0 0 18px;
 }
 
 .contact-card {
-  background: white;
-  color: var(--text);
-  padding: 34px;
+  background:white;
+  color:var(--text);
+  padding:34px;
 }
 
 .contact-card a,
 .contact-card p {
-  display: block;
-  color: var(--text);
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 18px;
+  display:block;
+  color:var(--text);
+  font-weight:700;
+  font-size:18px;
+  margin-bottom:18px;
 }
 
 .contact-card .btn {
-  background: var(--green);
-  color: white;
-  text-align: center;
-  margin-top: 12px;
+  background:var(--green);
+  color:white;
+  width:100%;
+  text-align:center;
 }
 
 footer {
-  background: white;
-  padding: 28px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--muted);
-  font-size: 14px;
+  background:white;
+  padding:28px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--muted);
 }
 
 footer img {
-  height: 55px;
+  height:58px;
 }
 
-@media (max-width: 900px) {
-  header {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  nav {
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-  }
-
+@media (max-width:900px) {
+  header { flex-direction:column; gap:18px; }
+  nav a { margin:0 10px; }
+  .hero h1 { font-size:40px; }
   .trust,
   .services-grid,
   .about,
-  .contact {
-    grid-template-columns: 1fr;
-  }
-
-  .contact {
-    gap: 30px;
-  }
-
-  footer {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
+  .contact { grid-template-columns:1fr; }
+  footer { flex-direction:column; gap:14px; text-align:center; }
 }
 </style>
 </head>
 
 <body>
-
-<div class="topbar">
-  Veteran-Owned • Greater Jacksonville, FL • Free Estimates
-</div>
 
 <header>
   <img src="logo.png" class="logo" alt="Ace Champion Exteriors Logo">
@@ -340,17 +265,13 @@ footer img {
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">Strong Work. Clean Finish.</div>
+  <div>
     <h1>Exterior Cleaning Services in Jacksonville, FL</h1>
     <p>
       Veteran-owned exterior cleaning for homes and commercial properties across the Greater Jacksonville area.
-      We provide reliable pressure washing, soft washing, window cleaning, deck cleaning, paver cleaning, and more.
+      Pressure washing, roof and gutter cleaning, window cleaning, deck cleaning, and pool deck washing.
     </p>
-    <div class="btn-row">
-      <a href="#contact" class="btn btn-light">Get a Free Estimate</a>
-      <a href="tel:9047350757" class="btn btn-outline">904.735.0757</a>
-    </div>
+    <a href="#contact" class="btn">Get a Free Estimate</a>
   </div>
 </section>
 
@@ -372,41 +293,60 @@ footer img {
   </div>
 
   <div class="services-grid">
+
     <div class="service-card">
-      <h3>Pressure Washing</h3>
-      <p>Driveways, sidewalks, patios, walkways, curbs, and exterior hard surfaces.</p>
+      <img src="pressure-washing.jpg" alt="Pressure washing">
+      <div class="service-content">
+        <h3>Pressure Washing</h3>
+        <p>Driveways, sidewalks, patios, walkways, curbs, and exterior hard surfaces.</p>
+      </div>
     </div>
 
     <div class="service-card">
-      <h3>Soft Washing</h3>
-      <p>Low-pressure cleaning for roofs, siding, soffits, and surfaces that need a safer touch.</p>
+      <img src="roof-gutter-cleaning.jpg" alt="Roof and gutter cleaning">
+      <div class="service-content">
+        <h3>Roof & Gutter Cleaning</h3>
+        <p>Safe cleaning for roofs, gutters, siding, and exterior buildup.</p>
+      </div>
     </div>
 
     <div class="service-card">
-      <h3>Window Cleaning</h3>
-      <p>Exterior window cleaning for residential and commercial properties.</p>
+      <img src="window-cleaning.jpg" alt="Window cleaning">
+      <div class="service-content">
+        <h3>Window Cleaning</h3>
+        <p>Exterior window cleaning for residential and commercial properties.</p>
+      </div>
     </div>
 
     <div class="service-card">
-      <h3>Deck Cleaning</h3>
-      <p>Cleaning for decks, patios, and outdoor living areas to restore a cleaner finish.</p>
+      <img src="deck-cleaning.jpg" alt="Deck cleaning">
+      <div class="service-content">
+        <h3>Deck Cleaning</h3>
+        <p>Cleaning for decks, patios, and outdoor living areas to restore a cleaner finish.</p>
+      </div>
     </div>
 
     <div class="service-card">
-      <h3>Pool Deck Washing</h3>
-      <p>Pool deck, screened patio, and surrounding concrete cleaning.</p>
+      <img src="pool-deck-washing.jpg" alt="Pool deck washing">
+      <div class="service-content">
+        <h3>Pool Deck Washing</h3>
+        <p>Pool deck, screened patio, and surrounding concrete cleaning.</p>
+      </div>
     </div>
 
     <div class="service-card">
-      <h3>Paver Cleaning</h3>
-      <p>Cleaning for pavers, brick walkways, hardscapes, and outdoor surfaces.</p>
+      <img src="pressure-washing.jpg" alt="Paver cleaning">
+      <div class="service-content">
+        <h3>Paver Cleaning</h3>
+        <p>Cleaning for pavers, brick walkways, hardscapes, and outdoor surfaces.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
 <section id="about" class="about">
   <div>
-    <div class="eyebrow">Why Choose ACE</div>
     <h2>Reliable service built on pride</h2>
   </div>
 
@@ -426,11 +366,8 @@ footer img {
 
 <section id="contact" class="contact">
   <div>
-    <div class="eyebrow">Get Your Free Estimate</div>
     <h2>Ready to clean up your exterior?</h2>
-    <p>
-      Call, text, or email today for exterior cleaning services in the Greater Jacksonville, FL area.
-    </p>
+    <p>Call, text, or email today for exterior cleaning services in the Greater Jacksonville, FL area.</p>
   </div>
 
   <div class="contact-card">
