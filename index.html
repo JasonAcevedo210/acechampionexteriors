@@ -3,129 +3,576 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ace Champion Exteriors</title>
+<title>Ace Champion Exteriors | Jacksonville Exterior Cleaning</title>
+<meta name="description" content="Veteran-owned exterior cleaning company serving Greater Jacksonville, FL. Pressure washing, roof and gutter cleaning, window cleaning, deck cleaning, pool deck washing, and paver cleaning.">
 
 <style>
-body {margin:0;font-family:Arial;background:#f5f5f5;}
-header {display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:white;}
-header img {height:60px;}
-nav a {margin-left:20px;text-decoration:none;color:#222;font-weight:600;}
+:root {
+  --green:#174f2c;
+  --dark:#07160e;
+  --cream:#f7f5ef;
+  --text:#102016;
+  --muted:#5d675f;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--cream);
+  color:var(--text);
+}
+
+a { text-decoration:none; color:inherit; }
+
+.topbar {
+  background:var(--green);
+  color:white;
+  text-align:center;
+  padding:10px 20px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+header {
+  background:white;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid #e7e7e0;
+}
+
+.logo {
+  height:82px;
+  width:auto;
+}
+
+nav a {
+  margin-left:28px;
+  color:var(--text);
+  font-weight:700;
+  font-size:14px;
+  text-transform:uppercase;
+}
+
+.header-btn {
+  background:var(--green);
+  color:white;
+  padding:15px 24px;
+  font-weight:700;
+  text-transform:uppercase;
+}
 
 .hero {
-  background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-  color:white;padding:120px 8%;
+  min-height:590px;
+  display:flex;
+  align-items:center;
+  padding:90px 8%;
+  color:white;
+  background:
+    linear-gradient(rgba(7,22,14,.72), rgba(7,22,14,.72)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80");
+  background-size:cover;
+  background-position:center;
 }
-.hero h1 {font-size:48px;}
-.btn {background:#174f2c;color:white;padding:12px 20px;display:inline-block;margin-top:20px;}
 
-.services {padding:60px 8%;}
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.hero-content {
+  max-width:780px;
+}
+
+.eyebrow {
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:16px;
+  color:var(--green);
+}
+
+.hero .eyebrow,
+.dark-section .eyebrow,
+.about .eyebrow {
+  color:white;
+}
+
+.hero h1 {
+  font-size:58px;
+  line-height:1;
+  margin:0 0 22px;
+  text-transform:uppercase;
+}
+
+.hero p {
+  font-size:19px;
+  line-height:1.6;
+  max-width:720px;
+}
+
+.btn-row {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn {
+  display:inline-block;
+  padding:15px 24px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.btn-light {
+  background:white;
+  color:var(--green);
+}
+
+.btn-outline {
+  border:1px solid white;
+  color:white;
+}
+
+.btn-green {
+  background:var(--green);
+  color:white;
+}
+
+.trust {
+  background:white;
+  padding:32px 8%;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  text-align:center;
+  color:var(--green);
+  font-weight:700;
+}
+
+section {
+  padding:80px 8%;
+}
+
+.section-title {
+  max-width:850px;
+  margin-bottom:38px;
+}
+
+.section-title h2 {
+  font-size:42px;
+  line-height:1.05;
+  margin:10px 0 14px;
+  text-transform:uppercase;
+}
+
+.section-title p {
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.6;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
 
 .card {
   background:white;
-  border-radius:6px;
+  border:1px solid #e2e2dc;
   overflow:hidden;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
 }
 
 .card img {
   width:100%;
-  height:220px;
+  height:230px;
   object-fit:cover;
+  display:block;
 }
 
-.card h3 {padding:15px 20px 0;}
-.card p {padding:10px 20px 20px;color:#555;}
+.card-content {
+  padding:28px;
+}
 
-.cta {
-  background:#174f2c;
+.card h3 {
+  margin:0 0 12px;
+  font-size:24px;
+  text-transform:uppercase;
+}
+
+.card p {
+  color:var(--muted);
+  line-height:1.6;
+  margin:0;
+}
+
+.about {
+  background:var(--green);
   color:white;
-  padding:60px 8%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about h2,
+.dark-section h2 {
+  font-size:42px;
+  line-height:1.05;
+  text-transform:uppercase;
+  margin:0 0 20px;
+}
+
+.about p,
+.about li {
+  font-size:18px;
+  line-height:1.7;
+}
+
+.about ul {
+  padding-left:20px;
+}
+
+.steps {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.step {
+  background:white;
+  padding:32px;
+  border:1px solid #e2e2dc;
+}
+
+.step-number {
+  color:var(--green);
+  font-size:34px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.step h3 {
+  margin:0 0 10px;
+  text-transform:uppercase;
+}
+
+.step p {
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.dark-section {
+  background:var(--dark);
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:60px;
+  align-items:center;
+}
+
+.dark-section p {
+  font-size:18px;
+  line-height:1.7;
+}
+
+.contact-card {
+  background:white;
+  color:var(--text);
+  padding:34px;
+}
+
+.contact-card a,
+.contact-card p {
+  display:block;
+  color:var(--text);
+  font-weight:700;
+  font-size:18px;
+  margin-bottom:18px;
+}
+
+.contact-card .btn {
+  color:white;
+  text-align:center;
+  width:100%;
+  margin-top:10px;
+}
+
+.service-area {
+  background:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.service-area h2 {
+  font-size:38px;
+  text-transform:uppercase;
+  margin-top:0;
+}
+
+.service-area p {
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.6;
+}
+
+.area-list {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  font-weight:700;
+  color:var(--green);
+}
+
+footer {
+  background:white;
+  padding:28px 8%;
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  color:var(--muted);
+  border-top:1px solid #e7e7e0;
 }
 
-.contact-box {
-  background:white;
-  color:#222;
-  padding:20px;
+footer img {
+  height:58px;
+}
+
+@media (max-width:900px) {
+  header {
+    flex-direction:column;
+    gap:18px;
+  }
+
+  nav a {
+    margin:0 10px;
+  }
+
+  .hero h1 {
+    font-size:40px;
+  }
+
+  .trust,
+  .grid,
+  .about,
+  .steps,
+  .dark-section,
+  .service-area {
+    grid-template-columns:1fr;
+  }
+
+  footer {
+    flex-direction:column;
+    gap:14px;
+    text-align:center;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+  Veteran-Owned • Jacksonville, FL • Free Estimates
+</div>
+
 <header>
-  <img src="logo.png">
+  <img src="logo.png" class="logo" alt="Ace Champion Exteriors Logo">
+
   <nav>
-    <a>Services</a>
-    <a>About</a>
-    <a>Contact</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
   </nav>
+
+  <a href="#contact" class="header-btn">Get Estimate</a>
 </header>
 
 <section class="hero">
-  <h1>Reliable Exterior Services You Can Count On</h1>
-  <p>Pressure Washing • Roof & Gutter Cleaning • Window Cleaning • More</p>
-  <a class="btn">Get Free Estimate</a>
+  <div class="hero-content">
+    <div class="eyebrow">Strong Work. Clean Finish.</div>
+    <h1>Exterior Cleaning Services in Jacksonville, FL</h1>
+    <p>
+      Veteran-owned exterior cleaning for homes and commercial properties across the Greater Jacksonville area.
+      Pressure washing, roof and gutter cleaning, window cleaning, deck cleaning, pool deck washing, and paver cleaning.
+    </p>
+    <div class="btn-row">
+      <a href="#contact" class="btn btn-light">Get a Free Estimate</a>
+      <a href="tel:9047350757" class="btn btn-outline">Call 904-735-0757</a>
+    </div>
+  </div>
 </section>
 
-<section class="services">
-  <h2>Our Services</h2>
+<div class="trust">
+  <div>✓ Free Estimates</div>
+  <div>✓ Veteran-Owned</div>
+  <div>✓ Local & Reliable</div>
+  <div>✓ Satisfaction Guaranteed</div>
+</div>
+
+<section id="services">
+  <div class="section-title">
+    <div class="eyebrow">Our Services</div>
+    <h2>Clean, professional exterior work</h2>
+    <p>
+      ACE Champion Exteriors helps homeowners and businesses improve curb appeal, protect exterior surfaces,
+      and keep properties looking clean year-round.
+    </p>
+  </div>
 
   <div class="grid">
 
     <div class="card">
-      <img src="pressure-washing.jpg">
-      <h3>Pressure Washing</h3>
-      <p>Driveways, sidewalks, patios, walkways, curbs, and exterior surfaces.</p>
+      <img src="pressure-washing.jpg" alt="Pressure washing">
+      <div class="card-content">
+        <h3>Pressure Washing</h3>
+        <p>Driveways, sidewalks, patios, walkways, curbs, and exterior hard surfaces.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="roof-gutter-cleaning.jpg">
-      <h3>Roof & Gutter Cleaning</h3>
-      <p>Safe cleaning for roofs, gutters, and exterior buildup.</p>
+      <img src="roof-gutter-cleaning.jpg" alt="Roof and gutter cleaning">
+      <div class="card-content">
+        <h3>Roof & Gutter Cleaning</h3>
+        <p>Safe cleaning for roofs, gutters, siding, and exterior buildup.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="window-cleaning.jpg">
-      <h3>Window Cleaning</h3>
-      <p>Exterior window cleaning for residential and commercial properties.</p>
+      <img src="window-cleaning.jpg" alt="Window cleaning">
+      <div class="card-content">
+        <h3>Window Cleaning</h3>
+        <p>Exterior window cleaning for residential and commercial properties.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="deck-cleaning.jpg">
-      <h3>Deck Cleaning</h3>
-      <p>Restore decks and outdoor spaces.</p>
+      <img src="deck-cleaning.jpg" alt="Deck cleaning">
+      <div class="card-content">
+        <h3>Deck Cleaning</h3>
+        <p>Cleaning for decks, patios, and outdoor living areas to restore a cleaner finish.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="pool-deck-washing.jpg">
-      <h3>Pool Deck Washing</h3>
-      <p>Clean pool decks and patios.</p>
+      <img src="pool-deck-washing.jpg" alt="Pool deck washing">
+      <div class="card-content">
+        <h3>Pool Deck Washing</h3>
+        <p>Pool deck, screened patio, and surrounding concrete cleaning.</p>
+      </div>
     </div>
 
-    <!-- ✅ FIXED PAVER IMAGE -->
     <div class="card">
-      <img src="paver-cleaning.jpg">
-      <h3>Paver Cleaning</h3>
-      <p>Cleaning for pavers, brick walkways, and hardscape surfaces.</p>
+      <img src="paver-cleaning.jpg" alt="Paver cleaning">
+      <div class="card-content">
+        <h3>Paver Cleaning</h3>
+        <p>Cleaning for pavers, brick walkways, hardscapes, and outdoor surfaces.</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-<section class="cta">
+<section id="about" class="about">
   <div>
-    <h2>Get Your Free Estimate</h2>
-    <p>Call or email today.</p>
+    <div class="eyebrow">Why Choose ACE</div>
+    <h2>Reliable service built on pride</h2>
   </div>
 
-  <div class="contact-box">
-    <p>📞 904-735-0757</p>
-    <p>📧 jason@acechampionexteriors.com</p>
+  <div>
+    <p>
+      Ace Champion Exteriors is a veteran-owned exterior cleaning company serving the Greater Jacksonville, FL area.
+      We focus on clean work, clear communication, and dependable service from start to finish.
+    </p>
+    <ul>
+      <li>Veteran-owned and locally operated</li>
+      <li>Residential and commercial exterior services</li>
+      <li>Professional, respectful service</li>
+      <li>Free estimates and clear communication</li>
+    </ul>
   </div>
 </section>
+
+<section id="process">
+  <div class="section-title">
+    <div class="eyebrow">How It Works</div>
+    <h2>Simple process. Clean results.</h2>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">01</div>
+      <h3>Request Estimate</h3>
+      <p>Call, text, or email with the service you need and your property details.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">02</div>
+      <h3>Schedule Service</h3>
+      <p>We coordinate a time that works and confirm the scope before starting.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">03</div>
+      <h3>Clean Finish</h3>
+      <p>We complete the work carefully and leave the exterior looking refreshed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="service-area">
+  <div>
+    <h2>Serving Greater Jacksonville, FL</h2>
+    <p>
+      ACE Champion Exteriors provides exterior cleaning services for residential and commercial properties
+      throughout the Jacksonville area.
+    </p>
+  </div>
+
+  <div class="area-list">
+    <div>Jacksonville</div>
+    <div>Orange Park</div>
+    <div>St. Johns</div>
+    <div>Fleming Island</div>
+    <div>Mandarin</div>
+    <div>Surrounding Areas</div>
+  </div>
+</section>
+
+<section id="contact" class="dark-section">
+  <div>
+    <div class="eyebrow">Get Your Free Estimate</div>
+    <h2>Ready to clean up your exterior?</h2>
+    <p>
+      Call, text, or email today for pressure washing, roof and gutter cleaning, window cleaning,
+      deck cleaning, pool deck washing, and paver cleaning.
+    </p>
+  </div>
+
+  <div class="contact-card">
+    <a href="tel:9047350757">☎ 904-735-0757</a>
+    <a href="mailto:jason@acechampionexteriors.com">✉ jason@acechampionexteriors.com</a>
+    <p>Greater Jacksonville, FL Area</p>
+    <a class="btn btn-green" href="mailto:jason@acechampionexteriors.com?subject=Free Estimate Request">Request Estimate</a>
+  </div>
+</section>
+
+<footer>
+  <img src="logo.png" alt="Ace Champion Exteriors Logo">
+  <p>Strong work. Clean finish. Veteran-owned and proudly serving Greater Jacksonville, FL.</p>
+</footer>
 
 </body>
 </html>
